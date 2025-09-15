@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[📃] mini tracker dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="main">
+    <h2>[📃] mini tracker dashboard</h2>
+    <button id="modeToggle">🌙 dark mode</button>
+
+    <input type="text" id="itemInput" placeholder="Enter points...">
+    <select id="categorySelect">
+      <option value="Work">Work</option>
+      <option value="Study">Study</option>
+      <option value="Fun">Fun</option>
+    </select>
+    <button id="addBtn">Add</button>
+
+    <ul id="itemList"></ul>
+    <h3>Total Points: <span id="total">0</span></h3>
+
+    <div class="chart-container">
+      <canvas id="categoryChart" width="300" height="200"></canvas>
+      <ul id="categoryTotals">
+        <li>Work: <span id="workTotal">0</span></li>
+        <li>Study: <span id="studyTotal">0</span></li>
+        <li>Fun: <span id="funTotal">0</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="instructions">
+    <h3>How to Use:</h3>
+    <ol>
+      <li>Enter your points (any number--like how many hours you've spent on that specific task).</li>
+      <li>Select a category.</li>
+      <li>Click "Add" to add to the list and chart.</li>
+      <li>Delete items by clicking "X".</li>
+      <li>Toggle dark/light mode with the moon/sun button.</li>
+    </ol>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
